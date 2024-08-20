@@ -27,7 +27,7 @@ async function makeApiRequest() {
     // Process the API response data if needed
     console.log(response.data);
     console.log("Response to blog",response2.status);
-    console.log("Response to render 2 wakeup",response2.data);
+    console.log("Response to render 2 wakeup",response3.data);
   } catch (error) {
     console.error('Error during API request:', error.message);
   }
