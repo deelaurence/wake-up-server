@@ -9,7 +9,7 @@ const port = process.env.PORT||3000;
 const apiEndpoint = 'https://api.skyskillhub.com/wake';
 const apiEndpoint2 = 'https://binary-bloggy.onrender.com/';
 const apiEndpoint3 = 'https://wake-up-server-8pcm.onrender.com';
-const apiEndpoint4 = 'https://appclickdnd-backend.onrender.com';
+const apiEndpoint4 = 'https://appclickdnd-backend.onrender.com/protected';
 
 
 // const apiEndpoint = 'http://localhost:4000/wake';
