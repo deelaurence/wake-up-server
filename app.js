@@ -6,10 +6,8 @@ const app = express();
 const port = process.env.PORT||3000;
 
 // Your API endpoint
-const apiEndpoint = 'https://api.skyskillhub.com/wake';
-const apiEndpoint2 = 'https://binary-bloggy.onrender.com/';
-const apiEndpoint3 = 'https://wake-up-server-8pcm.onrender.com';
-const apiEndpoint4 = 'https://appclickdnd-backend.onrender.com/protected';
+const apiEndpoints = ['https://thhsn.onrender.com'];
+
 
 
 // const apiEndpoint = 'http://localhost:4000/wake';
@@ -22,16 +20,19 @@ cron.schedule('*/8 * * * *', () => {
 // Function to make the API request using Axios
 async function makeApiRequest() {
   try {
-    const response = await axios.get(apiEndpoint);
-    const response2 = await axios.get(apiEndpoint2);
-    const response3 = await axios.get(apiEndpoint3);
-    const response4 = await axios.get(apiEndpoint4);
+    // const response = await axios.get(apiEndpoint);
+    // const response2 = await axios.get(apiEndpoint2);
+    // const response4 = await axios.get(apiEndpoint4);
     
-    // Process the API response data if needed
-    console.log(response.data);
-    console.log("Response to blog",response2.status);
-    console.log("Response to render 2 wakeup",response3.data);
-    console.log("Response to appclick task",response4.data);
+    // // Process the API response data if needed
+    // console.log("Response to blog",response2.status);
+    // console.log("Response to render 2 wakeup",response3.data);
+    // console.log("Response to appclick task",response4.data);
+
+    apiEndpoints.forEach((endpoint)=>{
+      const response = await axios.get(endpoint);
+      console.log(response.data);
+    )}
   } catch (error) {
     console.error('Error during API request:', error.message);
   }
