@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT||3000;
 
 // Your API endpoint
-const apiEndpoints = ['https://thhsn.onrender.com'];
+const apiEndpoints = ['https://thhsn-api.onrender.com'];
 
 
 
