@@ -20,11 +20,11 @@ cron.schedule('*/8 * * * *', () => {
 // Function to make the API request using Axios
 async function makeApiRequest() {
   try {
-    apiEndpoints.forEach(async (endpoint)=>{
-      const response = await axios.get(endpoint);
-      console.log(response.data);
+    // apiEndpoints.forEach(async (endpoint)=>{
 
-    })
+    // })
+      const response = await axios.get(apiEndpoints[0]);
+      console.log(response.data);
   } catch (error) {
     console.error('Error during API request:', error.message);
   }
